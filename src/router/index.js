@@ -14,6 +14,11 @@ const routes = [
     path: '/ChangingImages',
     name: 'ChangingImages',
     component: () => import('../views/ChangingImages.vue')
+  },
+  {
+    path: '/PhotoGallery',
+    name: 'PhotoGallery',
+    component: () => import('../views/PhotoGallery.vue')
   }
 ]
 

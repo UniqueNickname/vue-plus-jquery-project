@@ -18,6 +18,11 @@
           <router-link class="menu-list-item"
             :class="{'menu-list-item_active' : menuListItemActiveNumber == 2}"
             to="/ChangingImages">Changing images</router-link></li>
+        <li
+          @click="changeActiveIndex(3)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 3}"
+            to="/PhotoGallery">Photo gallery</router-link></li>
       </ul>
     </nav>
   </menu>
@@ -36,7 +41,6 @@ export default {
   methods: {
     activeMenu () {
       this.menuIsShow = !this.menuIsShow
-      this.updateContent()
     },
     changeActiveIndex (index) {
       this.menuListItemActiveNumber = index

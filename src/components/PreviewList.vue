@@ -1,11 +1,12 @@
 <template>
   <div class="preview-list">
-    <a v-for="(imgSource, index) in imgSources"
+    <a v-for="(source, index) in imgSources"
       :key="index"
-      :href="imgSource + '_h.jpg'"
+      :href="source.iHref"
       class="preview-list-item"
       target="blank">
-      <img :src="imgSource + '.jpg'"
+      <img
+        :src="source.iSrc + '.jpg'"
         alt="preview"
       />
     </a>
@@ -14,6 +15,8 @@
 
 <script>
 export default {
-  props: ['imgSources']
+  props: [
+    'imgSources'
+  ]
 }
 </script>

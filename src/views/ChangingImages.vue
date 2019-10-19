@@ -26,18 +26,54 @@ export default {
   data () {
     return {
       imgSources: [
-        './img/small/1',
-        './img/small/2',
-        './img/small/3',
-        './img/small/4',
-        './img/small/5',
-        './img/small/6',
-        './img/small/7',
-        './img/small/8',
-        './img/small/9',
-        './img/small/10',
-        './img/small/11',
-        './img/small/12'
+        {
+          iSrc: './img/small/1',
+          iHref: './img/small/1_h.jpg'
+        },
+        {
+          iSrc: './img/small/2',
+          iHref: './img/small/2_h.jpg'
+        },
+        {
+          iSrc: './img/small/3',
+          iHref: './img/small/3_h.jpg'
+        },
+        {
+          iSrc: './img/small/4',
+          iHref: './img/small/4_h.jpg'
+        },
+        {
+          iSrc: './img/small/5',
+          iHref: './img/small/5_h.jpg'
+        },
+        {
+          iSrc: './img/small/6',
+          iHref: './img/small/6_h.jpg'
+        },
+        {
+          iSrc: './img/small/7',
+          iHref: './img/small/7_h.jpg'
+        },
+        {
+          iSrc: './img/small/8',
+          iHref: './img/small/8_h.jpg'
+        },
+        {
+          iSrc: './img/small/9',
+          iHref: './img/small/9_h.jpg'
+        },
+        {
+          iSrc: './img/small/10',
+          iHref: './img/small/10_h.jpg'
+        },
+        {
+          iSrc: './img/small/11',
+          iHref: './img/small/11_h.jpg'
+        },
+        {
+          iSrc: './img/small/12',
+          iHref: './img/small/12_h.jpg'
+        }
       ]
     }
   },
@@ -56,7 +92,7 @@ export default {
             $(this).attr('src', imgFile)
           }
         )
-      })// the end of jquery function
+      })
     })
   }
 }
