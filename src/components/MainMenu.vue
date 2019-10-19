@@ -3,12 +3,21 @@
     :class="{'menu_active' : menuIsShow}">
     <a href="#"
       class="menu-btn"
-      :class="{'menu-btn_active' : menuIsShow}">
+      :class="{'menu-btn_active' : menuIsShow}"
+      @click="activeMenu">
         <span></span></a>
     <nav class="menu-list">
       <ul>
-        <li><router-link class="menu-list-item menu-list-item_active" to="/">Home</router-link></li>
-        <li><router-link class="menu-list-item" to="/ChangeImage">Change image</router-link></li>
+        <li
+          @click="changeActiveIndex(1)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 1}"
+            to="/">Home</router-link></li>
+        <li
+          @click="changeActiveIndex(2)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 2}"
+            to="/ChangeImage">Change image</router-link></li>
       </ul>
     </nav>
   </menu>
@@ -18,7 +27,18 @@
 export default {
   data () {
     return {
-      menuIsShow: true
+      menuIsShow: true,
+      menuListItemActiveNumber: 1
+    }
+  },
+  methods: {
+    activeMenu () {
+      this.menuIsShow = !this.menuIsShow
+      // console.log('index = ' + this.menuListItemActiveNumber)
+    },
+    changeActiveIndex (index) {
+      this.menuListItemActiveNumber = index
+      // console.log('index = ' + this.menuListItemActiveNumber)
     }
   }
 }
