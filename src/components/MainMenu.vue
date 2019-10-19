@@ -27,18 +27,17 @@
 export default {
   data () {
     return {
-      menuIsShow: true,
+      menuIsShow: false,
       menuListItemActiveNumber: 1
     }
   },
   methods: {
     activeMenu () {
       this.menuIsShow = !this.menuIsShow
-      // console.log('index = ' + this.menuListItemActiveNumber)
     },
     changeActiveIndex (index) {
       this.menuListItemActiveNumber = index
-      // console.log('index = ' + this.menuListItemActiveNumber)
+      // this.activeMenu()
     }
   }
 }
