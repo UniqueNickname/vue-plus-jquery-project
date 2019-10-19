@@ -1,14 +1,26 @@
 <template>
-  <menu class="menu">
+  <menu class="menu"
+    :class="{'menu_active' : menuIsShow}">
+    <a href="#"
+      class="menu-btn"
+      :class="{'menu-btn_active' : menuIsShow}">
+        <span></span></a>
     <nav class="menu-list">
-      <router-link class="menu-list-item" to="/">Home</router-link>
-      <router-link class="menu-list-item" to="/about">Change image</router-link>
+      <ul>
+        <li><router-link class="menu-list-item menu-list-item_active" to="/">Home</router-link></li>
+        <li><router-link class="menu-list-item" to="/ChangeImage">Change image</router-link></li>
+      </ul>
     </nav>
   </menu>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      menuIsShow: true
+    }
+  }
 }
 </script>
 

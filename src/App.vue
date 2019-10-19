@@ -11,9 +11,14 @@ import MainMenu from '@/components/MainMenu.vue'
 export default {
   components: {
     MainMenu: MainMenu
+  },
+  data () {
+    return {
+    }
   }
 }
 </script>
 
 <style lang="sass">
+@import 'assets/sass/main.sass'
 </style>
