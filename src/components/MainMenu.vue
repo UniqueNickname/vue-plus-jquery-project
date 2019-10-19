@@ -24,6 +24,8 @@
 </template>
 
 <script>
+import { eventEmitter } from '../main'
+
 export default {
   data () {
     return {
@@ -34,11 +36,20 @@ export default {
   methods: {
     activeMenu () {
       this.menuIsShow = !this.menuIsShow
+      this.updateContent()
     },
     changeActiveIndex (index) {
       this.menuListItemActiveNumber = index
       // this.activeMenu()
+    },
+    updateContent () {
+      eventEmitter.$emit('contentUpdated')
     }
+  },
+  created () {
+    eventEmitter.$on('menuUpdated', () => {
+      this.activeMenu()
+    })
   }
 }
 </script>

@@ -6,6 +6,7 @@ global.jQuery = jQuery
 global.$ = jQuery
 
 Vue.config.productionTip = false
+export const eventEmitter = new Vue()
 
 new Vue({
   router,
