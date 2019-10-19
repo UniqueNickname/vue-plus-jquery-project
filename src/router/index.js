@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/changeImage',
-    name: 'changeImage',
-    component: () => import('../views/ChangeImage.vue')
+    path: '/ChangingImages',
+    name: 'ChangingImages',
+    component: () => import('../views/ChangingImages.vue')
   }
 ]
 

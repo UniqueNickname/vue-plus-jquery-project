@@ -17,7 +17,7 @@
           @click="changeActiveIndex(2)">
           <router-link class="menu-list-item"
             :class="{'menu-list-item_active' : menuListItemActiveNumber == 2}"
-            to="/ChangeImage">Change image</router-link></li>
+            to="/ChangingImages">Changing images</router-link></li>
       </ul>
     </nav>
   </menu>
