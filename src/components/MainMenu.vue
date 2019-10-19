@@ -1,11 +1,11 @@
 <template>
   <menu class="menu"
     :class="{'menu_active' : menuIsShow}">
-    <a href="#"
+    <div
       class="menu-btn"
       :class="{'menu-btn_active' : menuIsShow}"
       @click="activeMenu">
-        <span></span></a>
+        <span></span></div>
     <nav class="menu-list">
       <ul>
         <li
