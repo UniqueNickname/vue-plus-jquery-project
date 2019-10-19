@@ -1,0 +1,68 @@
+@import vars
+@import fonts
+
+.code
+	&-btn
+		font-family: 'Propaganda-l'
+		position: absolute
+		bottom: 20%
+		right: 50%
+		transform: translateX(50%)
+		display: inline-block
+		text-transform: uppercase
+		color: $code-btn
+		letter-spacing: 4px
+		overflow: hidden
+		padding: 15px 30px
+		transition: .2s
+		cursor: pointer
+		&__line
+			position: absolute
+			display: block
+			&_top
+				top: 0
+				left: -100%
+				width: 100%
+				height: 2px
+				background: linear-gradient(90deg, transparent, $code-btn)
+			&_right
+				top: -100%
+				right: 0
+				width: 2px
+				height: 100%
+				background: linear-gradient(180deg, transparent, $code-btn)
+			&_bottom
+				bottom: 0
+				right: -100%
+				width: 100%
+				height: 2px
+				background: linear-gradient(270deg, transparent, $code-btn)
+			&_left
+				bottom: -100%
+				left: 0
+				width: 2px
+				height: 100%
+				background: linear-gradient(0deg, transparent, $code-btn)
+
+		&:hover
+			transition-delay: 1s
+			box-shadow: 0 0 10px $code-btn, 0 0 40px $code-btn, 0 0 80px $code-btn
+			background-color: $code-btn
+			color: $main-bcg
+			.code-btn__line
+				transition: 1s
+				// transition-delay: .25s
+				&_top
+					left: 100%
+					transition: 1.25s
+					transition-delay: .25s
+				&_right
+					top: 100%
+					transition: 1s
+				&_bottom
+					right: 100%
+					transition: 1.25s
+					transition-delay: .25s
+				&_left
+					transition: 1s
+					bottom: 100%
