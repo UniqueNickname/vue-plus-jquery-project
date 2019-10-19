@@ -1,12 +1,12 @@
 <template>
   <div
-    class="content home"
-    :class="{'content_active' : contentIsActive}">
+    class="content home">
     <div class="header">
       <div class="name">Hi! I'm Ivan</div>
       <div class="welcome">Welcome to my website</div>
       <small>His created for demonstration my laboratory works</small>
       <div class="arrow"
+        @click="menuUpdated"
         >Click to menu button and choose work</div>
     </div>
   </div>
@@ -21,18 +21,12 @@ export default {
   },
   data () {
     return {
-      contentIsActive: false
     }
   },
   methods: {
-    activeContent () {
-      this.contentIsActive = !this.contentIsActive
+    menuUpdated () {
+      eventEmitter.$emit('menuUpdated')
     }
-  },
-  created () {
-    eventEmitter.$on('contentUpdated', () => {
-      this.activeContent()
-    })
   }
 }
 </script>

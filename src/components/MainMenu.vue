@@ -41,9 +41,6 @@ export default {
     changeActiveIndex (index) {
       this.menuListItemActiveNumber = index
       // this.activeMenu()
-    },
-    updateContent () {
-      eventEmitter.$emit('contentUpdated')
     }
   },
   created () {

@@ -1,14 +1,12 @@
 <template>
   <div
-    class="content change-image"
-    :class="{'content_active' : contentIsActive}">
+    class="content change-image">
     <div class="header">Header</div>
     <PreviewList :imgSources="imgSources"/>
   </div>
 </template>
 
 <script>
-import { eventEmitter } from '../main'
 import PreviewList from '@/components/PreviewList.vue'
 
 export default {
@@ -34,16 +32,6 @@ export default {
         './img/small/12'
       ]
     }
-  },
-  methods: {
-    activeContent () {
-      this.contentIsActive = !this.contentIsActive
-    }
-  },
-  created () {
-    eventEmitter.$on('contentUpdated', () => {
-      this.activeContent()
-    })
   }
 }
 </script>
