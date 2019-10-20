@@ -23,6 +23,11 @@
           <router-link class="menu-list-item"
             :class="{'menu-list-item_active' : menuListItemActiveNumber == 3}"
             to="/PhotoGallery">Photo gallery</router-link></li>
+        <li
+          @click="changeActiveIndex(4)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 4}"
+            to="/SmartMenu">Smart menu</router-link></li>
       </ul>
     </nav>
   </menu>

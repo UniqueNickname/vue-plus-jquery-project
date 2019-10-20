@@ -19,6 +19,11 @@ const routes = [
     path: '/PhotoGallery',
     name: 'PhotoGallery',
     component: () => import('../views/PhotoGallery.vue')
+  },
+  {
+    path: '/SmartMenu',
+    name: 'SmartMenu',
+    component: () => import('../views/SmartMenu.vue')
   }
 ]
 
