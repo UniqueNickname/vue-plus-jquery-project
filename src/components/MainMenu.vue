@@ -28,6 +28,11 @@
           <router-link class="menu-list-item"
             :class="{'menu-list-item_active' : menuListItemActiveNumber == 4}"
             to="/SmartMenu">Smart menu</router-link></li>
+        <li
+          @click="changeActiveIndex(5)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 5}"
+            to="/Form">Form</router-link></li>
       </ul>
     </nav>
   </menu>
@@ -49,7 +54,7 @@ export default {
     },
     changeActiveIndex (index) {
       this.menuListItemActiveNumber = index
-      // this.activeMenu()
+      this.activeMenu()
     }
   },
   created () {
