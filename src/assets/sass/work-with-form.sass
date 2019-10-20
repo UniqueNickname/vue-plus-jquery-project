@@ -7,14 +7,21 @@
 	.header
 		position: static
 		transform: translate(0, 0)
-		margin: 0px 0px 15px
+		margin: 0px 0px 10px
 		border-bottom: 4px solid #333
 	.form
 		font-family: ProximaNova-l
 		fieldset
+			font-size: 20px
 			box-sizing: border-box
 			border: 2px solid $input-border
-			margin-bottom: 20px
+			margin-bottom: 10px
+		&-list
+			font-size: 16px
+			position: relative
+			left: 50%
+			transform: translateX(-50%)
+			max-width: 460px
 		&-item
 			text-align: right
 			margin: 
@@ -42,6 +49,7 @@
 					width: 13px
 					height: 13px
 				margin-bottom: 10px
+				transform: translateX(-60px)
 			&-radio
 				label
 					// margin-right: 2px
@@ -55,5 +63,5 @@
 	.code
 		&-btn
 			position: static
-			transform: translate(0, -10px)
+			transform: translate(0px, 0px)
 			// margin-top: 50px
