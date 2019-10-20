@@ -33,6 +33,11 @@
           <router-link class="menu-list-item"
             :class="{'menu-list-item_active' : menuListItemActiveNumber == 5}"
             to="/WorkWithForm">Work with a form</router-link></li>
+        <li
+          @click="changeActiveIndex(6)">
+          <router-link class="menu-list-item"
+            :class="{'menu-list-item_active' : menuListItemActiveNumber == 6}"
+            to="/Registration">Registration</router-link></li>
       </ul>
     </nav>
   </menu>
