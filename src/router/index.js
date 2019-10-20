@@ -26,9 +26,9 @@ const routes = [
     component: () => import('../views/SmartMenu.vue')
   },
   {
-    path: '/Form',
-    name: 'Form',
-    component: () => import('../views/Form.vue')
+    path: '/WorkWithForm',
+    name: 'WorkWithForm',
+    component: () => import('../views/WorkWithForm.vue')
   }
 ]
 

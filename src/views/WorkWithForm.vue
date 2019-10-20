@@ -1,7 +1,7 @@
 <template>
   <div
-    class="content form">
-    <div class="header">Form</div>
+    class="content work-with-form">
+    <div class="header">Work with form</div>
     <CodeBtn />
     <CodeBox >
       My code
@@ -32,5 +32,5 @@ export default {
 </script>
 
 <style lang="sass">
-@import '../assets/sass/form.sass'
+@import '../assets/sass/work-with-form.sass'
 </style>
