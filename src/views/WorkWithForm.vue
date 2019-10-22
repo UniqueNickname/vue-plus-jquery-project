@@ -7,46 +7,46 @@
          <legend>Payment Information</legend>
          <div class="form-list">
             <div class="form-item">
-              <label name="name">Name</label>
+              <label for="name">Name</label>
               <input name="name" type="text" placeholder="Ivan">
             </div>
             <div class="form-item">
-              <label name="surname">Surname</label>
+              <label for="surname">Surname</label>
               <input name="surname" type="text" placeholder="Bloodwine">
             </div>
             <div class="form-item">
-              <label name="region">Region</label>
+              <label for="region">Region</label>
               <input name="region" type="text" placeholder="Moscow region">
             </div>
             <div class="form-item">
-              <label name="sity">Sity</label>
+              <label for="sity">Sity</label>
               <input name="sity" type="text" placeholder="Moscow">
             </div>
               <div class="form-item">
-              <label name="address">Address</label>
+              <label for="address">Address</label>
               <input name="address" type="text" placeholder="Mytishchi, Silicate street, 10/7">
             </div>
             <div class="form-item">
-              <label name="postcode">Postcode</label>
+              <label for="postcode">Postcode</label>
               <input name="postcode" type="text" placeholder="141031">
             </div>
             <CountryList />
             <div class="form-item form-item-radio">
               <span class="add-tag">Payment method</span>
               <input name="payment" value="PayPal" class="payment-disable" type="radio">
-              <label name="payment" value="PayPal">PayPal</label>
+              <label for="payment" value="PayPal">PayPal</label>
               <input name="payment" value="Visa" class="payment-enable" type="radio">
-              <label name="payment" value="Visa">Visa</label>
+              <label for="payment" value="Visa">Visa</label>
               <input name="payment" value="MasterCard" class="payment-enable" type="radio">
-              <label name="payment" value="MasterCard">MasterCard</label>
+              <label for="payment" value="MasterCard">MasterCard</label>
             </div>
             <div class="card-data">
               <div class="form-item">
-                <label name="card-number">Card number</label>
+                <label for="card-number">Card number</label>
                 <input name="card-number" type="text" placeholder="4444-4444-4444-4444">
               </div>
               <div class="form-item">
-                <label name="validity">Validity</label>
+                <label for="validity">Validity</label>
                 <input name="validity" type="text" placeholder="04/20">
               </div>
            </div>
@@ -57,30 +57,30 @@
          <div class="form-list">
             <div class="form-item form-item-checkbox">
               <input name="hide-ship" type="checkbox">
-              <label name="hide-ship">Similar to payment information</label>
+              <label for="hide-ship">Similar to payment information</label>
             </div>
             <div class="form-item form-item-hide">
-              <label name="name">Name</label>
+              <label for="name">Name</label>
               <input name="name" type="text" placeholder="Ivan">
             </div>
             <div class="form-item form-item-hide">
-              <label name="surname">Surname</label>
+              <label for="surname">Surname</label>
               <input name="surname" type="text" placeholder="Bloodwine">
             </div>
             <div class="form-item form-item-hide">
-              <label name="region">Region</label>
+              <label for="region">Region</label>
               <input name="region" type="text" placeholder="Moscow region">
             </div>
             <div class="form-item form-item-hide">
-              <label name="sity">Sity</label>
+              <label for="sity">Sity</label>
               <input name="sity" type="text" placeholder="Moscow">
             </div>
               <div class="form-item form-item-hide">
-              <label name="address">Address</label>
+              <label for="address">Address</label>
               <input name="address" type="text" placeholder="Mytishchi, Silicate street, 10/7">
             </div>
             <div class="form-item form-item-hide">
-              <label name="postcode">Postcode</label>
+              <label for="postcode">Postcode</label>
               <input name="postcode" type="text" placeholder="141031">
             </div>
             <CountryList class="form-item-hide" />
@@ -136,7 +136,7 @@ export default {
         $('.form-item-hide').toggleClass('hide')
       })
       $('.form-item-checkbox label').on('click', function () {
-        const v = $(this).attr('name')
+        const v = $(this).attr('for')
         $('input[name="' + v + '"]').click()
       })
     })

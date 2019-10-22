@@ -7,19 +7,29 @@
 	.header
 		position: static
 		transform: translate(0, 0)
-		margin: 100px 0px 10px
+		margin: 0px 0px 10px
 		border-bottom: 4px solid #333
 		span
 			background-color: $accent
 	.form
     margin-top: 100px
-    margin-bottom: 100px
-    // position: absolute
-    // width: 500px
-    // top: 45%
-    // left: 50%
-    // transform: translate(-50%, -50%)
-
+    margin-bottom: 50px
+    &-list
+      select
+        &.error
+          color: $placeholder
+          background-color: $accent
+          border-color: $accent
+      input
+        &.error
+          background-color: $accent
+          border-color: $accent
+      label
+        &.error
+          color: $accent
+          display: block
+          
+          
 	.code
 		&-btn
 			position: static
